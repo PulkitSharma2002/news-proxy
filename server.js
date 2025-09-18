@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 
-const NEWSAPI_KEY = 'c1f44b3e087f40c8983d73c9f2d6c815';
+const NEWSAPI_KEY = process.env.NEWSAPI_KEY;
 
 app.get('/news', async (req, res) => {
   const url = `https://newsapi.org/v2/top-headlines?category=business&language=en&pageSize=10&apiKey=${NEWSAPI_KEY}`;
